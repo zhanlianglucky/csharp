@@ -19,3 +19,26 @@
     所有的语句和表达式必须以分号（;）结尾。
     程序的执行从 Main 方法开始。
     与 Java 不同的是，文件名可以不同于类的名称。
+
+
+
+## 数据类型
+
+
+在 C# 中，变量分为以下几种类型：
+
+    值类型（Value types）
+    引用类型（Reference types）
+    指针类型（Pointer types）
+  
+  
+## 封装
+
+
+    public：所有对象都可以访问；
+    private：对象本身在对象内部可以访问；
+    protected：只有该类对象及其子类对象可以访问
+    internal：同一个程序集的对象可以访问；
+    protected internal：访问限于当前程序集或派生自包含类的类型。
+
+
