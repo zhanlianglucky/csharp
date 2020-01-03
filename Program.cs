@@ -22,7 +22,7 @@ namespace csharp
                 "info2 = {1};\n" +
                 "info3 = {2};\n" +
                 "info4 = {3};\n"+
-                "info4 = {4};\n"
+                "info5 = {4};\n"
                 ,
                 modifier.pInfo,
                 modifier.getPrivateInfo(),
