@@ -7,10 +7,33 @@ namespace csharp
         static void Main(string[] args)
         {
 
-            testModifier();
-
+            testFunction();
+            //testModifier();
             //testDataType();
         }
+
+
+        //方法
+        private static void testFunction()
+        {
+            Function function = new Function();
+            function.printTestInfo();
+
+            int a = 2; int b = 5;
+            Console.WriteLine("{0} + {1} = {2}", a, b, function.add(a, b));
+
+            function.changeData(ref a, b);
+            Console.WriteLine("a = {0}", a);
+
+            int c = 100, d = 88;
+            function.outPrint(out c, out d);
+            Console.WriteLine("new a = {0};\nnew b = {1}", c, d);
+        }
+
+
+
+
+
 
 
         //访问修饰符
