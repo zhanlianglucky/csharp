@@ -7,9 +7,57 @@ namespace csharp
         static void Main(string[] args)
         {
 
-            testFunction();
-            //testModifier();
-            //testDataType();
+
+
+            testStruct();//结构体
+            //testNullable();// nullable 可空类型
+            //testFunction();//方法
+            //testModifier();//访问修饰符
+            //testDataType();//数据类型
+        }
+
+
+        //结构体
+        private static void testStruct()
+        {
+            Point p = new Point(12,66);
+            p.printXY();
+        }
+
+        struct Point 
+        {
+            private float x;
+            private float y;
+            public Point(float x,float y)
+            {
+                this.x = x;
+                this.y = y;
+            }
+
+            public void printXY()
+            {
+                Console.WriteLine("x = {0}\ny = {1}",x,y);
+            }
+
+        }
+
+        // nullable 可空类型
+        private static void testNullable()
+        {
+            int? a = null;
+            int? b = new int?();
+            double? d1 = new double?();
+            double? d2 = null;
+            bool? bo = new bool?();
+
+            Console.WriteLine("a = {0}\nb = {1}\nd1 = {2}\nd2 = {3}\nbo = {4}",a,b,d1,d2,bo);
+
+            //合并运算符？？ 如果第一个操作数的值为 null，则运算符返回第二个操作数的值，否则返回第一个操作数的值
+            int? c = new int?();
+            c = null;
+            int d = c ?? 12;
+            Console.WriteLine("d = {0}",d);
+
         }
 
 
@@ -29,11 +77,6 @@ namespace csharp
             function.outPrint(out c, out d);
             Console.WriteLine("new a = {0};\nnew b = {1}", c, d);
         }
-
-
-
-
-
 
 
         //访问修饰符
