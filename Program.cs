@@ -9,12 +9,48 @@ namespace csharp
 
 
 
-            testStruct();//结构体
+            testClass();
+            //testStruct();//结构体
             //testNullable();// nullable 可空类型
             //testFunction();//方法
             //testModifier();//访问修饰符
             //testDataType();//数据类型
         }
+
+
+        private static void testClass()
+        {
+            Time time = new Time("11:11");
+            Time.index = 12;
+            Console.WriteLine("currentTime = {0}\nindex = {1}",time.currentTime,Time.index);
+            Time.index = 0;
+            
+        }
+
+
+        class Time
+        {
+            public Time() 
+            {
+                Console.WriteLine("Time() 无参构造执行！");
+            }
+            public Time(string time) 
+            {
+                this.currentTime = time;
+                Console.WriteLine("Time(time) 有参数构造执行！");
+            }
+
+            public string currentTime;
+            public static int index = 1;
+
+            ~Time()//析构函数
+            {
+                Console.WriteLine("Time()对象销毁！");
+            }
+
+
+        }
+
 
 
         //结构体
