@@ -1,6 +1,8 @@
 ﻿using System;
 
-namespace csharp
+//System 为命名空间，类似Java包名的概念。 using 功能类似Java import导入包功能。
+
+namespace csharp //csharp 为命名空间，类似Java包名的概念。名字相同，则为同一个命名空间。
 {
     class Program
     {
@@ -9,62 +11,59 @@ namespace csharp
 
 
 
-            testClass();
+            testOperatorOverload();//运算符重载
+            #region
+            //testInterface();//多态
+            //testClass();//类
             //testStruct();//结构体
             //testNullable();// nullable 可空类型
             //testFunction();//方法
             //testModifier();//访问修饰符
             //testDataType();//数据类型
+            #endregion
+        }
+
+        private static void testOperatorOverload()
+        {
+            Point p1 = new Point(1, 2);
+            Point p2 = new Point(3, 4);
+            Point p3 = p1 + p2;
+            Console.WriteLine("point.x = {0}\npoint.y = {1}", p3.x, p3.y);
         }
 
 
+        //多态 接口多继承
+        private static void testInterface()
+        {
+            Rectangle rect = new Rectangle(new RecProperty());
+        }
+
+
+        //类
         private static void testClass()
         {
             Time time = new Time("11:11");
             Time.index = 12;
-            Console.WriteLine("currentTime = {0}\nindex = {1}",time.currentTime,Time.index);
+            Console.WriteLine("currentTime = {0}\nindex = {1}", time.currentTime, Time.index);
             Time.index = 0;
-            
-        }
-
-
-        class Time
-        {
-            public Time() 
-            {
-                Console.WriteLine("Time() 无参构造执行！");
-            }
-            public Time(string time) 
-            {
-                this.currentTime = time;
-                Console.WriteLine("Time(time) 有参数构造执行！");
-            }
-
-            public string currentTime;
-            public static int index = 1;
-
-            ~Time()//析构函数
-            {
-                Console.WriteLine("Time()对象销毁！");
-            }
-
 
         }
+
 
 
 
         //结构体
         private static void testStruct()
         {
-            Point p = new Point(12,66);
+            Line p = new Line(12, 66);
             p.printXY();
         }
 
-        struct Point 
+        struct Line
         {
             private float x;
             private float y;
-            public Point(float x,float y)
+            public Line(float x, float y)
             {
                 this.x = x;
                 this.y = y;
@@ -72,7 +71,7 @@ namespace csharp
 
             public void printXY()
             {
-                Console.WriteLine("x = {0}\ny = {1}",x,y);
+                Console.WriteLine("x = {0}\ny = {1}", x, y);
             }
 
         }
@@ -86,13 +85,13 @@ namespace csharp
             double? d2 = null;
             bool? bo = new bool?();
 
-            Console.WriteLine("a = {0}\nb = {1}\nd1 = {2}\nd2 = {3}\nbo = {4}",a,b,d1,d2,bo);
+            Console.WriteLine("a = {0}\nb = {1}\nd1 = {2}\nd2 = {3}\nbo = {4}", a, b, d1, d2, bo);
 
             //合并运算符？？ 如果第一个操作数的值为 null，则运算符返回第二个操作数的值，否则返回第一个操作数的值
             int? c = new int?();
             c = null;
             int d = c ?? 12;
-            Console.WriteLine("d = {0}",d);
+            Console.WriteLine("d = {0}", d);
 
         }
 
@@ -123,7 +122,7 @@ namespace csharp
                 "info1 = {0};\n" +
                 "info2 = {1};\n" +
                 "info3 = {2};\n" +
-                "info4 = {3};\n"+
+                "info4 = {3};\n" +
                 "info5 = {4};\n"
                 ,
                 modifier.pInfo,
@@ -131,7 +130,7 @@ namespace csharp
                 modifier.iInfo,
                 modifier.getProtectInfo(),
                 modifier.getProtectIntenalInfo()
-                ) ;
+                );
         }
 
 

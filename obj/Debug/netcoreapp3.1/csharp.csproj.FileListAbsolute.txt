@@ -4,8 +4,8 @@ D:\workspace\csharp\csharp\bin\Debug\netcoreapp3.1\csharp.runtimeconfig.json
 D:\workspace\csharp\csharp\bin\Debug\netcoreapp3.1\csharp.runtimeconfig.dev.json
 D:\workspace\csharp\csharp\bin\Debug\netcoreapp3.1\csharp.dll
 D:\workspace\csharp\csharp\bin\Debug\netcoreapp3.1\csharp.pdb
-D:\workspace\csharp\csharp\obj\Debug\netcoreapp3.1\csharp.csprojAssemblyReference.cache
 D:\workspace\csharp\csharp\obj\Debug\netcoreapp3.1\csharp.AssemblyInfoInputs.cache
 D:\workspace\csharp\csharp\obj\Debug\netcoreapp3.1\csharp.AssemblyInfo.cs
 D:\workspace\csharp\csharp\obj\Debug\netcoreapp3.1\csharp.dll
 D:\workspace\csharp\csharp\obj\Debug\netcoreapp3.1\csharp.pdb
+D:\workspace\csharp\csharp\obj\Debug\netcoreapp3.1\csharp.csprojAssemblyReference.cache
