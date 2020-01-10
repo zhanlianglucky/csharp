@@ -2,6 +2,8 @@
 
 //System 为命名空间，类似Java包名的概念。 using 功能类似Java import导入包功能。
 
+//代码格式化：选中->ctrl + k + f, 多行注释：选中->ctrl + k + c
+
 namespace csharp //csharp 为命名空间，类似Java包名的概念。名字相同，则为同一个命名空间。
 {
     class Program
@@ -11,8 +13,11 @@ namespace csharp //csharp 为命名空间，类似Java包名的概念。名字�
 
 
 
-            testOperatorOverload();//运算符重载
+            testDelegate();//代理
+
             #region
+            //testListener();//监听
+            //testOperatorOverload();//运算符重载
             //testInterface();//多态
             //testClass();//类
             //testStruct();//结构体
@@ -21,6 +26,33 @@ namespace csharp //csharp 为命名空间，类似Java包名的概念。名字�
             //testModifier();//访问修饰符
             //testDataType();//数据类型
             #endregion
+        }
+
+        /// <summary>
+        /// 代理
+        /// </summary>
+        private static void testDelegate()
+        {
+            AddSub ass = new AddSub();
+            MulDiv md = new MulDiv();
+            Calculate add = new Calculate(ass.add);
+            Calculate sub = new Calculate(ass.sub);
+            Calculate mul = new Calculate(md.mul);
+            Calculate div = new Calculate(md.div);
+
+            Console.WriteLine("{0} + {1} = {2}", 2, 3, add(2, 3));
+            Console.WriteLine("{0} - {1} = {2}", 4, 5, sub(4, 5));
+            Console.WriteLine("{0} * {1} = {2}", 6, 7, mul(6, 7));
+            Console.WriteLine("{0} / {1} = {2}", 9, 3, div(9, 3));
+        }
+
+
+        //监听
+        private static void testListener()
+        {
+            View v = new View();
+            v.addOnClickListener(new OnViewClickListener());
+            v.onClick();
         }
 
         private static void testOperatorOverload()
