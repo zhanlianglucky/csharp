@@ -13,9 +13,11 @@ namespace csharp //csharp 为命名空间，类似Java包名的概念。名字�
 
 
 
-            testDelegate();//代理
 
+
+            testPretreatment();//预处理
             #region
+            //testDelegate();//代理
             //testListener();//监听
             //testOperatorOverload();//运算符重载
             //testInterface();//多态
@@ -26,6 +28,15 @@ namespace csharp //csharp 为命名空间，类似Java包名的概念。名字�
             //testModifier();//访问修饰符
             //testDataType();//数据类型
             #endregion
+        }
+
+        /// <summary>
+        /// 预处理
+        /// </summary>
+        private static void testPretreatment()
+        {
+            new PretreatmentTest().test();
+            
         }
 
         /// <summary>
