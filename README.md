@@ -176,7 +176,7 @@ C# 提供了一个特殊的数据类型，nullable 类型（可空类型），可空类型可以表示其基础值
         }
 
 
-## 预处理器指令 
+## 预处理器指令  
 
     预处理器指令指导编译器在实际编译开始之前对信息进行预处理。
     
@@ -189,6 +189,40 @@ C# 提供了一个特殊的数据类型，nullable 类型（可空类型），可空类型可以表示其基础值
     参考：https://www.runoob.com/csharp/csharp-preprocessor-directives.html 
 
 
-        
+
+## 异常处理 
+
+    try：一个 try 块标识了一个将被激活的特定的异常的代码块。后跟一个或多个 catch 块。
+    catch：程序通过异常处理程序捕获异常。catch 关键字表示异常的捕获。
+    finally：finally 块用于执行给定的语句，不管异常是否被抛出都会执行。例如，如果您打开一个文件，不管是否出现异常文件都要被关闭。
+    throw：当问题出现时，程序抛出一个异常。使用 throw 关键字来完成。 
+
+
+            try
+        {
+           // 引起异常的语句
+        }
+        catch( ExceptionName e1 )
+        {
+           // 错误处理代码
+        }
+        catch( ExceptionName e2 )
+        {
+           // 错误处理代码
+        }
+        catch( ExceptionName eN )
+        {
+           // 错误处理代码
+        }
+        finally
+        {
+           // 要执行的语句
+        }
+
+
+
+
+
+
         
 

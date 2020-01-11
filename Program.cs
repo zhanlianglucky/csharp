@@ -15,9 +15,10 @@ namespace csharp //csharp 为命名空间，类似Java包名的概念。名字�
 
 
 
-            testPretreatment();//预处理
+            ExceptionTest.test();//异常处理
             #region
             //testDelegate();//代理
+            //testPretreatment();//预处理
             //testListener();//监听
             //testOperatorOverload();//运算符重载
             //testInterface();//多态
@@ -55,6 +56,15 @@ namespace csharp //csharp 为命名空间，类似Java包名的概念。名字�
             Console.WriteLine("{0} - {1} = {2}", 4, 5, sub(4, 5));
             Console.WriteLine("{0} * {1} = {2}", 6, 7, mul(6, 7));
             Console.WriteLine("{0} / {1} = {2}", 9, 3, div(9, 3));
+
+            //组合代理
+            Calculate cc = ass.add;
+            cc += ass.sub;//add 和 sub都会执行
+            Console.WriteLine("{0} // {1} = {2}", 9, 3, cc(9, 3));
+
+            cc -= ass.sub;//去掉sub 只执行add方法
+            Console.WriteLine("{0} // {1} = {2}", 9, 3, cc(9, 3));
+
         }
 
 
