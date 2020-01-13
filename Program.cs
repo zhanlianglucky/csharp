@@ -15,8 +15,10 @@ namespace csharp //csharp 为命名空间，类似Java包名的概念。名字�
 
 
 
-            ExceptionTest.test();//异常处理
+            FileOperation.test();//文件读写操作
+
             #region
+            //ExceptionTest.test();//异常处理
             //testDelegate();//代理
             //testPretreatment();//预处理
             //testListener();//监听

@@ -221,8 +221,26 @@ C# 提供了一个特殊的数据类型，nullable 类型（可空类型），可空类型可以表示其基础值
 
 
 
+##  文件读写 
 
+    System.IO 命名空间有各种不同的类，用于执行各种文件操作，如创建和删除文件、读取或写入文件，关闭文件等。 
 
+    I/O 类	                  描述
+    BinaryReader	从二进制流读取原始数据。
+    BinaryWriter	以二进制格式写入原始数据。
+    BufferedStream	字节流的临时存储。
+    Directory	    有助于操作目录结构。
+    DirectoryInfo	用于对目录执行操作。
+    DriveInfo	    提供驱动器的信息。
+    File	        有助于处理文件。
+    FileInfo	    用于对文件执行操作。
+    FileStream	    用于文件中任何位置的读写。
+    MemoryStream	用于随机访问存储在内存中的数据流。
+    Path	        对路径信息执行操作。
+    StreamReader	用于从字节流中读取字符。
+    StreamWriter	用于向一个流中写入字符。
+    StringReader	用于读取字符串缓冲区。
+    StringWriter	用于写入字符串缓冲区。
 
         
 
